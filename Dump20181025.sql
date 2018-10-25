@@ -106,6 +106,7 @@ CREATE TABLE `expense` (
   `Expense_ID` decimal(10,0) NOT NULL,
   `Expense_Sector` varchar(30) DEFAULT NULL,
   `Total_Expense` decimal(10,2) DEFAULT NULL,
+  `status` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`Expense_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -116,7 +117,7 @@ CREATE TABLE `expense` (
 
 LOCK TABLES `expense` WRITE;
 /*!40000 ALTER TABLE `expense` DISABLE KEYS */;
-INSERT INTO `expense` VALUES (1,'Education',10000.00),(2,'House Rent',15000.00),(3,'Food',12000.00),(4,'Cloth',6000.00),(5,'Medicine',7000.00),(6,'Tour',5000.00);
+INSERT INTO `expense` VALUES (1,'Education',10000.00,'monthly'),(2,'House Rent',15000.00,'monthly'),(3,'Food',12000.00,'monthly'),(4,'Cloth',6000.00,'yearly'),(5,'Medicine',7000.00,'yearly'),(6,'Tour',5000.00,'yearly');
 /*!40000 ALTER TABLE `expense` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -136,6 +137,7 @@ CREATE TABLE `family` (
   `Total_Adult` decimal(2,0) DEFAULT NULL,
   `Total_Savings` decimal(10,2) DEFAULT NULL,
   `Family_Head` varchar(80) DEFAULT NULL,
+  `Building_NO` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`Family_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -146,7 +148,7 @@ CREATE TABLE `family` (
 
 LOCK TABLES `family` WRITE;
 /*!40000 ALTER TABLE `family` DISABLE KEYS */;
-INSERT INTO `family` VALUES (1,'Datta_Family',80000.00,6.00,2,3,10000.00,'Shely Chowdhury'),(2,'Alam',50000.00,10.00,6,4,200.00,'Nurul Alam'),(3,'Chowdhury',2.00,20.00,18,2,0.00,'Ahasunul Kader Chy'),(4,'Hasan',200000.00,4.00,2,2,100000.00,'Reshad'),(5,'Rahman',50000.00,6.00,3,3,40000.00,'Abdur Rahman');
+INSERT INTO `family` VALUES (1,'Datta_Family',80000.00,6.00,2,3,10000.00,'Shely Chowdhury','01'),(2,'Alam',50000.00,10.00,6,4,200.00,'Nurul Alam','02'),(3,'Chowdhury',2.00,20.00,18,2,0.00,'Ahasunul Kader Chy','03'),(4,'Hasan',200000.00,4.00,2,2,100000.00,'Reshad','04'),(5,'Rahman',50000.00,6.00,3,3,40000.00,'Abdur Rahman','05'),(6,'Maifee',20000.00,20.00,2,2,30000.00,'Maifee','06'),(7,'Nishat',2.00,20.00,18,2,0.00,'Ahsanul','03'),(8,'Rishat',5000.00,5.00,2,3,2000.00,'Rishat','08'),(9,'Sadia',20000.00,5.00,2,3,2000.00,'Rakin','09'),(10,'Rakin',20000.00,5.00,2,3,200.00,'Sadia','10');
 /*!40000 ALTER TABLE `family` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -219,6 +221,7 @@ CREATE TABLE `member` (
   `Birth_Date` varchar(30) DEFAULT NULL,
   `Marital_Status` varchar(5) DEFAULT NULL,
   `Educational_Info_ID` decimal(10,0) DEFAULT NULL,
+  `height` decimal(5,2) DEFAULT NULL,
   PRIMARY KEY (`Member_ID`),
   KEY `Blood_Group_ID` (`Blood_Group_ID`),
   KEY `Bank_Account_ID` (`Bank_Account_ID`),
@@ -235,7 +238,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES (1,'Niladree',70000.00,26,1,1770,'06/07/1999','M',1),(2,'Anik',80000.00,25,2,1771,'04/01/1998','S',2),(3,'Nokhotro',0.00,7,3,1772,'06/07/2025','S',3),(4,'Arupa',12000.00,20,4,1773,'06/07/2019','S',4);
+INSERT INTO `member` VALUES (1,'Niladree',70000.00,26,1,1770,'06/07/1999','M',1,NULL),(2,'Anik',80000.00,25,2,1771,'04/01/1998','S',2,NULL),(3,'Nokhotro',0.00,7,3,1772,'06/07/2025','S',3,NULL),(4,'Arupa',12000.00,20,4,1773,'06/07/2019','S',4,NULL);
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -302,4 +305,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-25 12:52:48
+-- Dump completed on 2018-10-25 15:51:39
