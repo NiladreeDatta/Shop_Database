@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `family01` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-USE `family01`;
 -- MySQL dump 10.13  Distrib 8.0.13, for Win64 (x86_64)
 --
 -- Host: localhost    Database: family01
@@ -42,7 +40,7 @@ CREATE TABLE `bank_account` (
 
 LOCK TABLES `bank_account` WRITE;
 /*!40000 ALTER TABLE `bank_account` DISABLE KEYS */;
-INSERT INTO `bank_account` VALUES (1770,'Trust Bank','455','Chittagong',2000.00,'0000000001',10000.00),(1771,'AB Bank','456','Chittagong',5000.00,'0000000002',11000.00),(1772,'AB Bank','457','Dhaka',6000.00,'0000000003',12000.00),(1773,'AB Bank','458','Sylhet',7000.00,'0000000004',13000.00);
+INSERT INTO `bank_account` VALUES (1770,'Trust Bank','455','Chittagong',2000.00,'0000000001',10000.00),(1771,'AB Bank','456','Chittagong',5000.00,'0000000002',11000.00),(1772,'AB Bank','457','Dhaka',6000.00,'0000000003',12000.00),(1773,'AB Bank','458','Sylhet',7000.00,'0000000004',13000.00),(1774,'AB Bank','459','Dhaka',NULL,'0000000005',14000.00),(1775,'AB Bank','460','Dhaka',NULL,'0000000006',15000.00),(1776,'AB Bank','461','Dhaka',NULL,'0000000007',16000.00),(1777,'AB Bank','462','Dhaka',NULL,'0000000008',17000.00),(1778,'AB Bank','463','Dhaka',NULL,'0000000009',18000.00),(1779,'AB Bank','464','Dhaka',NULL,'0000000010',19000.00);
 /*!40000 ALTER TABLE `bank_account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -66,7 +64,7 @@ CREATE TABLE `blood_group` (
 
 LOCK TABLES `blood_group` WRITE;
 /*!40000 ALTER TABLE `blood_group` DISABLE KEYS */;
-INSERT INTO `blood_group` VALUES (1,'A+'),(2,'B+'),(3,'AB+'),(4,'O+');
+INSERT INTO `blood_group` VALUES (1,'A+'),(2,'B+'),(3,'AB+'),(4,'O+'),(5,'O+'),(6,'B+'),(7,'AB+'),(8,'A-'),(9,'B-'),(10,'B+');
 /*!40000 ALTER TABLE `blood_group` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +89,7 @@ CREATE TABLE `educational_info` (
 
 LOCK TABLES `educational_info` WRITE;
 /*!40000 ALTER TABLE `educational_info` DISABLE KEYS */;
-INSERT INTO `educational_info` VALUES (1,'CU','Chittagong'),(2,'DU','Dhaka'),(3,'RUET','Rajshahi'),(4,'CUET','Chittagong');
+INSERT INTO `educational_info` VALUES (1,'CU','Chittagong'),(2,'DU','Dhaka'),(3,'RUET','Rajshahi'),(4,'CUET','Chittagong'),(5,'RU','Rajshahi'),(6,'JU','Dhaka'),(7,'NU','Chittagong'),(8,'NSTU','Noakhali'),(9,'PSTU','Pabna'),(10,'SUST','Sylhet');
 /*!40000 ALTER TABLE `educational_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,7 +115,7 @@ CREATE TABLE `expense` (
 
 LOCK TABLES `expense` WRITE;
 /*!40000 ALTER TABLE `expense` DISABLE KEYS */;
-INSERT INTO `expense` VALUES (1,'Education',10000.00,'monthly'),(2,'House Rent',15000.00,'monthly'),(3,'Food',12000.00,'monthly'),(4,'Cloth',6000.00,'yearly'),(5,'Medicine',7000.00,'yearly'),(6,'Tour',5000.00,'yearly');
+INSERT INTO `expense` VALUES (1,'Education',10000.00,'monthly'),(2,'House Rent',15000.00,'monthly'),(3,'Food',12000.00,'monthly'),(4,'Cloth',6000.00,'yearly'),(5,'Medicine',7000.00,'yearly'),(6,'Tour',5000.00,'yearly'),(7,'Travel',5000.00,'yearly'),(8,'Electricity',2000.00,'monthly'),(9,'Gass',1000.00,'monthly'),(10,'Water',500.00,'monthly');
 /*!40000 ALTER TABLE `expense` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -175,7 +173,7 @@ CREATE TABLE `family_member_relationship` (
 
 LOCK TABLES `family_member_relationship` WRITE;
 /*!40000 ALTER TABLE `family_member_relationship` DISABLE KEYS */;
-INSERT INTO `family_member_relationship` VALUES (1,1),(2,2),(3,3),(4,4);
+INSERT INTO `family_member_relationship` VALUES (1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10);
 /*!40000 ALTER TABLE `family_member_relationship` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -200,7 +198,7 @@ CREATE TABLE `income` (
 
 LOCK TABLES `income` WRITE;
 /*!40000 ALTER TABLE `income` DISABLE KEYS */;
-INSERT INTO `income` VALUES (1,'Job',100000.00),(2,'Job',12000.00),(3,'Job',35000.00),(4,'Job',23000.00);
+INSERT INTO `income` VALUES (1,'Job',100000.00),(2,'Job',12000.00),(3,'Job',35000.00),(4,'Job',23000.00),(5,'Job',5000.00),(6,'Job',6000.00),(7,'Job',10000.00),(8,'Job',32000.00),(9,'Jon',32003.00),(10,'Job',3200.00);
 /*!40000 ALTER TABLE `income` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -238,7 +236,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES (1,'Niladree',70000.00,26,1,1770,'06/07/1999','M',1,NULL),(2,'Anik',80000.00,25,2,1771,'04/01/1998','S',2,NULL),(3,'Nokhotro',0.00,7,3,1772,'06/07/2025','S',3,NULL),(4,'Arupa',12000.00,20,4,1773,'06/07/2019','S',4,NULL);
+INSERT INTO `member` VALUES (1,'Niladree',70000.00,26,1,1770,'06/07/1999','M',1,NULL),(2,'Anik',80000.00,25,2,1771,'04/01/1998','S',2,NULL),(3,'Nokhotro',0.00,7,3,1772,'06/07/2025','S',3,NULL),(4,'Arupa',12000.00,20,4,1773,'06/07/2019','S',4,NULL),(5,'ABir',1300.00,21,5,1774,'06/07/2019','M',5,NULL),(6,'Noyon',1400.00,22,6,1775,'06/07/2019','S',6,NULL),(7,'Rupa',1500.00,23,7,1776,'06/07/2019','M',7,NULL),(8,'Snigdho',1600.00,24,8,1777,'06/07/2019','S',8,NULL),(9,'Arup',1700.00,25,9,1778,'06/07/2019','M',9,NULL),(10,'Abonii',1800.00,26,10,1779,'06/07/2019','S',10,NULL);
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -265,7 +263,7 @@ CREATE TABLE `member_expense_relationship` (
 
 LOCK TABLES `member_expense_relationship` WRITE;
 /*!40000 ALTER TABLE `member_expense_relationship` DISABLE KEYS */;
-INSERT INTO `member_expense_relationship` VALUES (1,1),(2,2),(3,3),(4,4);
+INSERT INTO `member_expense_relationship` VALUES (1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10);
 /*!40000 ALTER TABLE `member_expense_relationship` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -292,7 +290,7 @@ CREATE TABLE `member_income_relationship` (
 
 LOCK TABLES `member_income_relationship` WRITE;
 /*!40000 ALTER TABLE `member_income_relationship` DISABLE KEYS */;
-INSERT INTO `member_income_relationship` VALUES (1,1),(2,2),(3,3),(4,4);
+INSERT INTO `member_income_relationship` VALUES (1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10);
 /*!40000 ALTER TABLE `member_income_relationship` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -305,4 +303,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-25 15:51:39
+-- Dump completed on 2018-10-27  1:29:04
